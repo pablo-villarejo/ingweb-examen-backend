@@ -1,10 +1,10 @@
 services:
-  lawiki:
+  examen-backend:
     build:
       context: .
       dockerfile: Dockerfile
     container_name:
-      lawiki-container
+      examen-backend-container
     ports:
       - "${PORT}:${PORT}"
     environment:

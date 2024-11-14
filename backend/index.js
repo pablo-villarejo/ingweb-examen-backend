@@ -6,13 +6,13 @@ const app = express()
 app.use(express.json())
 
 const PORT = process.env.PORT || 3000
-const MONGO_URI= process.env.MONGO_URI || "mongodb://admin:admin@localhost:27017/laWiki?authSource=admin"
+const MONGO_URI= process.env.MONGO_URI || "mongodb://admin:admin@localhost:27017/examen-backend?authSource=admin"
 
-const usersRouter = require('./src/routes/usersRouter')
-const birdsRouter = require('./src/routes/birdsRouter')
+const userRouter = require('./src/routes/userRouter')
+const placeholderRouter = require('./src/routes/placeholderRouter')
 
-app.use('/users', usersRouter)
-app.use('/birds', birdsRouter)
+app.use('/users', userRouter)
+app.use('/placeholders', placeholderRouter)
 
 mongoose.connect(MONGO_URI)
     .then(() => {
