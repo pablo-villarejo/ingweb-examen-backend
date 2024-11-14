@@ -9,6 +9,9 @@ services:
       - "${PORT}:${PORT}"
     environment:
       - PORT=${PORT}
+      - MONGO_URI=${MONGO_URI}
+    depends_on:
+      - mongo
 
   mongo:
     image: mongo

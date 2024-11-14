@@ -40,13 +40,13 @@ docker compose up -d
 This will build and start all the microservices and the database. The services will be available at port 3001. (You can change the port in the .env file if needed.)
 
 5. Seed the database with some initial data, accessing the corresponding endpoint.
-[http://localhost:3000/seed](http://localhost:3000/seed), OR
+[http://localhost:3000/seeding](http://localhost:3000/seeding), OR
 
 ```bash
 curl http://localhost:3000/seed
 ```
 
 6. By default, the backend will be deployed at the following port:
-- [http://localhost:3001/users](http://localhost:3001/users) - Users service
-- [http://localhost:3001/wikis](http://localhost:3001/wikis) - Wiki service
+- [http://localhost:3000/users](http://localhost:3000/users) - Users service
+- [http://localhost:3000/wikis](http://localhost:3000/wikis) - Wiki service
 - Adittionally, a mongo-express instance will be available at [http://localhost:8081](http://localhost:8081) to manage the database, with the credentials defined in the .env file, by default `admin:admin`.
