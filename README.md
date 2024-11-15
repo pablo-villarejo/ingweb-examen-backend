@@ -10,7 +10,7 @@ Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
 >docker system prune -a
 >```
 
-## Deploying all microservices
+## Deploying the project
 
 1. Clone the repository to your local machine and cd into it.
 
@@ -31,13 +31,13 @@ cd backend
 cp .env.example .env
 ```
 
-4. Deploy all microservices running the following command.
+4. Deploy the project running the following command.
 
 ```bash
 docker compose up -d
 ```
 
-This will build and start all the microservices and the database. The services will be available at port 3001. (You can change the port in the .env file if needed.)
+This will build and start the project and the database. The services will be available at port 3000. (You can change the port in the .env file if needed.)
 
 5. Seed the database with some initial data, accessing the corresponding endpoint.
 [http://localhost:3000/seeding](http://localhost:3000/seeding), OR

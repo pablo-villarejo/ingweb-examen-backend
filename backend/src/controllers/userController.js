@@ -1,6 +1,15 @@
+const User = require('../models/userModel')
+
+
 // basic CRUD operations for users
 const getAllUsers = async (req, res) => {
-    res.send('All users')
+    try {
+        const users = await User.find()
+        res.json(users).status(200)
+    } catch (error) {
+        console.log('Error getting users:', error);
+        res.status(500).json({ message: 'Error getting users' });
+    }
 }
 
 const getUser = async (req, res) => {

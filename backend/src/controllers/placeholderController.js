@@ -1,3 +1,6 @@
+const Placeholder = require('../models/placeholderModel')
+
+
 const placeholderController = require('./placeholderController')
 
 // basic CRUD operations for placeholders
