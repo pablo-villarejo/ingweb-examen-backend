@@ -1,22 +1,22 @@
 const express = require('express')
 
 // import json data
-const users = require('../seeding/users.json')
-const placeholders = require('../seeding/placeholders.json')
+const colaboradores = require('../seeding/colaboradores.json')
+const tareas = require('../seeding/tareas.json')
 
 // import models
-const User = require('../models/userModel')
-const Placeholder = require('../models/placeholderModel')
+const Colaborador = require('../models/colaboradorModel')
+const Tarea = require('../models/tareaModel')
 
 const router = express.Router()
 
 router.get('/', async (req, res) => {
     try {
 
-        //await User.deleteMany()
-        //await Placeholder.deleteMany()
-        //await User.insertMany(users)
-        //await Placeholder.insertMany(placeholders)
+        await Colaborador.deleteMany()
+        await Tarea.deleteMany()
+        await Colaborador.insertMany(colaboradores)
+        await Tarea.insertMany(tareas)
 
         res.send('Data seeded')
     } catch (error) {
